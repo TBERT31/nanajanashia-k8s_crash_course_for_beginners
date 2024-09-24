@@ -4,15 +4,14 @@ metadata:
   name: dashboard-ingress
   namespace: kubernetes-dashboard
 spec:
-  ingressClassName: "nginx"
   rules:
   - host: dashboard.com
     http:
       paths:
       - path: /
-        pathType: Prefix  
+        pathType: Prefix
         backend:
           service:
             name: kubernetes-dashboard
-            port: 
+            port:
               number: 80
